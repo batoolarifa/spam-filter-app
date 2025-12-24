@@ -54,7 +54,7 @@ with gr.Blocks(theme="soft", css="footer {display: none !important}") as demo:
     examples = gr.Examples(
         examples=[
             ["Win a free iPhone! Click here now!!! Limited time offer."],
-            ["Congratulations! You've won $1,000,000. Claim your prize."],
+            ["Earn money from home with this simple trick. Start today."],
             ["Hey, are we still meeting for lunch tomorrow?"],
             ["Meeting rescheduled to 3 PM. See you then!"],
         ],
