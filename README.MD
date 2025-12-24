@@ -1,85 +1,216 @@
+# 🚨 Spam Email Classification System (ML + Gradio)
 
-# 🚨 Spam Email Classifier
-🔗 Live Demo: [Add your deployed app link here]
+An end-to-end **Spam Email Classification** project built using **Machine Learning**, following a **modular, production-ready architecture**, and deployed with an interactive **Gradio UI**.
 
----
-
-## 📌 Description
-A web-based application to classify emails as **Spam** or **Not Spam (Ham)** using **TF-IDF vectorization** and a **Support Vector Machine (SVM)** model. Users can quickly detect spam emails with a clean, interactive interface.
+This system classifies emails as **Spam** or **Not Spam** using **TF-IDF feature extraction** and a **Support Vector Machine (SVM)** classifier, prioritizing **high precision** to reduce false positives.
 
 ---
 
-![Spam Email Classifier UI](images/spam_email_demo.gif)
-*Example: Classifying Spam and Not Spam emails*
+## 📌 Project Overview
 
+Spam emails often contain promotions, scams, or malicious content. Manual filtering is inefficient and error-prone.  
+This project automates spam detection by leveraging **Natural Language Processing (NLP)** and **Machine Learning**, providing a reliable and scalable solution.
 
+---
 
-## 🚀 Features
-- 📊 **Data Preprocessing**: Tokenization, stopword removal, punctuation removal, lemmatization using NLTK.
-- 🤖 **Machine Learning Model**: TF-IDF vectorization + SVM.
-- 🌐 **Interactive Web App**: Built with Gradio for a user-friendly interface.
-- 🕙 **Real-Time Predictions**: Paste emails and get instant results.
-- 🖼 **Visual Feedback**: UI shows predictions for Spam and Not Spam emails.
+## 🎯 Objectives
+
+- Clean and preprocess raw email text
+- Extract meaningful textual features
+- Train and compare multiple ML models
+- Evaluate performance using standard classification metrics
+- Select the best-performing model
+- Deploy the model with a user-friendly web interface
 
 ---
 
 ## 📂 Dataset
-- **Type**: Email samples labeled as Spam or Not Spam.
-- **Contents**: Spam emails (ads, phishing, promotions) and normal emails (personal/professional emails).
-- **Preprocessing**: Lowercasing, punctuation removal, tokenization, stopword removal, lemmatization.
+
+- **Source:** Kaggle – Spam Email Dataset  
+  https://www.kaggle.com/datasets/jackksoncsie/spam-email-dataset/data
+
+- **Columns:**
+  - `text` → Email content
+  - `spam` → Target label  
+    - `1` = Spam  
+    - `0` = Not Spam
+
+The dataset contains a mix of promotional, scam, and legitimate emails.
 
 ---
 
-## 🛠 Models Used
-- ✅ Support Vector Machine (SVM) with TF-IDF vectorization
+## 🔄 Project Workflow
+
+### 1️⃣ Data Understanding
+- Loaded and inspected dataset structure
+- Checked shape, missing values, and duplicates
+- Reviewed sample emails for context
 
 ---
 
-## 📊 Results & Evaluation
-- Predicts whether a given email is Spam or Not Spam.
-- Including **subject + body** improves accuracy.
+### 2️⃣ Text Preprocessing
+Applied NLP techniques to clean and normalize text:
+- Lowercasing
+- Removing special characters and punctuation
+- Tokenization
+- Stopword removal
+- Lemmatization
+
+This ensured consistent and noise-free input for modeling.
 
 ---
 
-## 🖼️ Additional UI Screenshots
-
-**Spam Email Example**  
-![Spam Email Prediction](images/spam_email.png)  
-*Prediction: Spam*
-
-**Not Spam Email Example**  
-![Not Spam Email Prediction](images/not_spam_email.png)  
-*Prediction: Not Spam*
-
+### 3️⃣ Exploratory Data Analysis (EDA)
+- Analyzed class distribution (Spam vs Not Spam)
+- Studied email length (words & characters)
+- Identified frequent words in spam and non-spam emails
+- Visualized patterns to understand data behavior
 
 ---
 
-## ⚡ Usage
-1️⃣ **Clone the repository**
+### 4️⃣ Feature Engineering
+- Generated numerical features:
+  - Word count
+  - Character count
+- Compared feature distributions between spam and ham emails
 
-```bash
-git clone <your-repo-url>
-cd <repo-folder>
+---
+
+### 5️⃣ Model Building
+Text was vectorized using:
+- **Bag of Words (BoW)**
+- **TF-IDF**
+- **TF-IDF (1–2 grams)**
+
+Models trained and evaluated:
+- Naive Bayes (Multinomial, Bernoulli, Gaussian)
+- Random Forest
+- Extra Trees
+- **Linear Support Vector Machine (SVM)**
+
+Dense conversion was applied where required.
+
+---
+
+### 6️⃣ Model Evaluation
+Models were evaluated using:
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Confusion Matrix
+
+📌 **Precision was prioritized** to minimize false spam detection (false positives).
+
+---
+
+### 7️⃣ Final Model Selection
+- **TF-IDF + Linear SVM** delivered the best balance of performance and reliability
+- Final model and vectorizer were saved using `pickle`
+
+---
+
+### 8️⃣ Prediction on New Emails
+- New email text goes through the same preprocessing pipeline
+- TF-IDF vectorization is applied
+- Model predicts:
+  - **Spam**
+  - **Not Spam**
+
+---
+
+## 🧠 Project Architecture (Modular Design)
+
 ```
 
+spam-classification/
+│
+├── app.py                  # Gradio application
+├── utils/
+│   ├── model_loader.py     # Loads trained model & vectorizer
+│   ├── preprocessing.py   # Text cleaning & NLP pipeline
+│   └── predict.py          # Prediction logic
+│
+├── saved_models/
+│   ├── vectorizer_TF-IDF.pkl
+│   └── SVM_TF-IDF.pkl
+│
+├── notebook/
+│   └── spam_classification.ipynb  # Complete ML workflow
+│
+├── requirements.txt
+└── README.md
 
-2️⃣ **Install dependencies**
-
-```bash
-pip install -r requirements.txt
 ```
 
+✔ Clean separation of concerns  
+✔ Reusable utility modules  
+✔ Production-friendly structure  
 
-3️⃣ **Launch the Gradio app**
+---
 
-```bash
-pip install -r requirements.txt
-```
+## 🖥️ Web Application (Gradio)
+
+- Interactive UI for email classification
+- Input full email content
+- One-click prediction
+- Example emails included
+- Clean, minimal interface
+
+### ▶ Demo
+🔗 **Live Demo Link:** *(Add your demo link here)*
+
+---
+
+## 📸 Screenshots
+*(Add 2 screenshots of your Gradio UI here)*
+
+---
+
+## ⚙️ Technologies Used
+
+- **Python**
+- **Scikit-learn**
+- **NLTK**
+- **Gradio**
+- **Pandas & NumPy**
+- **Pickle**
+- **Jupyter Notebook**
+
+---
+
+## 📈 Results & Conclusion
+
+- Successfully built a robust spam classification system
+- Achieved strong precision, reducing false spam flags
+- Modular architecture supports easy scaling and reuse
+- UI enables real-world usability and testing
+
+This project demonstrates **end-to-end ML development**, from data exploration to deployment.
+
+---
+
+## 🚀 Future Improvements
+
+- Support batch email classification
+- Deploy on cloud (Hugging Face / AWS / GCP)
+- Add confidence scores for predictions
+
+---
+
+## 👤 Author
+
+**Syeda Arifa Batool**  
+SE @ Karachi University | AI & ML Practitioner  
+Applying technology to create real-world value 📈
+
+---
+
+## 🔗 Connect with Me
+
+- **LinkedIn:** https://www.linkedin.com/in/arifa-batool/  
+- **Kaggle:** https://www.linkedin.com/in/arifa-batool/  
+- **Email:** thearifabatool@gmail.com
 
 
-1️⃣ **Clone the repository**
-
-```bash
-git clone <your-repo-url>
-cd <repo-folder>
-```
+⭐ If you find this project useful, feel free to star the repository!
