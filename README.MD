@@ -158,8 +158,7 @@ spam-classification/
 - Clean, minimal interface
 
 ### ▶ Demo
-🔗 **Live Demo Link:** *(Add your demo link here)*
-
+[Live Demo 🔗](https://huggingface.co/spaces/arifa-batool/spam-filter-app)
 ---
 
 ## 📸 Screenshots
