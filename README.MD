@@ -4,14 +4,14 @@ An end-to-end **Spam Email Classification** project built using **Machine Learni
 
 This system classifies emails as **Spam** or **Not Spam** using **TF-IDF feature extraction** and a **Support Vector Machine (SVM)** classifier, prioritizing **high precision** to reduce false positives.
 
----
+
 
 ## 📌 Project Overview
 
 Spam emails often contain promotions, scams, or malicious content. Manual filtering is inefficient and error-prone.  
 This project automates spam detection by leveraging **Natural Language Processing (NLP)** and **Machine Learning**, providing a reliable and scalable solution.
 
----
+
 
 ## 🎯 Objectives
 
@@ -22,7 +22,7 @@ This project automates spam detection by leveraging **Natural Language Processin
 - Select the best-performing model
 - Deploy the model with a user-friendly web interface
 
----
+
 
 ## 📂 Dataset
 
@@ -37,7 +37,6 @@ This project automates spam detection by leveraging **Natural Language Processin
 
 The dataset contains a mix of promotional, scam, and legitimate emails.
 
----
 
 ## 🔄 Project Workflow
 
@@ -46,7 +45,7 @@ The dataset contains a mix of promotional, scam, and legitimate emails.
 - Checked shape, missing values, and duplicates
 - Reviewed sample emails for context
 
----
+
 
 ### 2️⃣ Text Preprocessing
 Applied NLP techniques to clean and normalize text:
@@ -58,7 +57,7 @@ Applied NLP techniques to clean and normalize text:
 
 This ensured consistent and noise-free input for modeling.
 
----
+
 
 ### 3️⃣ Exploratory Data Analysis (EDA)
 - Analyzed class distribution (Spam vs Not Spam)
@@ -66,7 +65,7 @@ This ensured consistent and noise-free input for modeling.
 - Identified frequent words in spam and non-spam emails
 - Visualized patterns to understand data behavior
 
----
+
 
 ### 4️⃣ Feature Engineering
 - Generated numerical features:
@@ -74,7 +73,7 @@ This ensured consistent and noise-free input for modeling.
   - Character count
 - Compared feature distributions between spam and ham emails
 
----
+
 
 ### 5️⃣ Model Building
 Text was vectorized using:
@@ -90,7 +89,7 @@ Models trained and evaluated:
 
 Dense conversion was applied where required.
 
----
+
 
 ### 6️⃣ Model Evaluation
 Models were evaluated using:
@@ -102,13 +101,13 @@ Models were evaluated using:
 
 📌 **Precision was prioritized** to minimize false spam detection (false positives).
 
----
+
 
 ### 7️⃣ Final Model Selection
 - **TF-IDF + Linear SVM** delivered the best balance of performance and reliability
 - Final model and vectorizer were saved using `pickle`
 
----
+
 
 ### 8️⃣ Prediction on New Emails
 - New email text goes through the same preprocessing pipeline
@@ -117,7 +116,7 @@ Models were evaluated using:
   - **Spam**
   - **Not Spam**
 
----
+
 
 ## 🧠 Project Architecture (Modular Design)
 
@@ -147,7 +146,7 @@ spam-filter-app/
 ✔ Reusable utility modules  
 ✔ Production-friendly structure  
 
----
+
 
 ## 🖥️ Web Application (Gradio)
 
@@ -169,7 +168,6 @@ spam-filter-app/
 
 
 
----
 
 ## ⚙️ Technologies Used
 
@@ -181,7 +179,7 @@ spam-filter-app/
 - **Pickle**
 - **Jupyter Notebook**
 
----
+
 
 ## 📈 Results & Conclusion
 
@@ -192,7 +190,7 @@ spam-filter-app/
 
 This project demonstrates **end-to-end ML development**, from data exploration to deployment.
 
----
+
 
 ## 🚀 Future Improvements
 
@@ -200,14 +198,14 @@ This project demonstrates **end-to-end ML development**, from data exploration t
 - Deploy on cloud (Hugging Face / AWS / GCP)
 - Add confidence scores for predictions
 
----
+
 
 ## 👤 Author
 
 **Syeda Arifa Batool**  
 SE @ Karachi University | AI & ML Practitioner | Applying technology to create real-world value 📈
 
----
+
 
 ## 🔗 Connect with Me
 
