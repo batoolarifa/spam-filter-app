@@ -123,7 +123,7 @@ Models were evaluated using:
 
 ```
 
-spam-classification/
+spam-filter-app/
 │
 ├── app.py                  # Gradio application
 ├── utils/
@@ -161,8 +161,15 @@ spam-classification/
 [Live Demo 🔗](https://huggingface.co/spaces/arifa-batool/spam-filter-app)
 ---
 
-## 📸 Screenshots
-*(Add 2 screenshots of your Gradio UI here)*
+##  Application UI 
+
+![Spam Email](https://github.com/user-attachments/assets/1defefcc-c8fc-4576-94bf-ce5d3aa093dc)
+
+
+
+![Not Spam Email](https://github.com/user-attachments/assets/152ea3af-bb33-47ed-9c6c-74c1a983b04e)
+
+
 
 ---
 
@@ -200,8 +207,7 @@ This project demonstrates **end-to-end ML development**, from data exploration t
 ## 👤 Author
 
 **Syeda Arifa Batool**  
-SE @ Karachi University | AI & ML Practitioner  
-Applying technology to create real-world value 📈
+SE @ Karachi University | AI & ML Practitioner | Applying technology to create real-world value 📈
 
 ---
 
