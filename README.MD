@@ -159,9 +159,7 @@ spam-filter-app/
 
 ### ▶ Demo
 [Live Demo 🔗](https://huggingface.co/spaces/arifa-batool/spam-filter-app)
----
 
-##  Application UI 
 
 ![Spam Email](https://github.com/user-attachments/assets/1defefcc-c8fc-4576-94bf-ce5d3aa093dc)
 
